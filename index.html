@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sudoku Solver</title>
+
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="title-container container">
+		<div class="inner-title-container">
+			<h1>Sudoku Solver</h1>
+		</div>
+	</div>
+
+	<div class="main-container container">
+        <div class="components-container">
+            <div class="puzzle-container">
+                <div class="board-container">
+                    <table id="sudokuTable">
+                        <tbody>
+                        <tr>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                            <td><input type="text" maxlength="1"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="buttons-container">
+                    <button id="import-btn" class="btn">Import</button>
+                    <button id="reset-btn" class="btn">Reset Board</button>
+                    <button id="solve-btn" class="btn">Solve</button>
+                </div>
+            </div>
+
+            <div class="controls-container">
+                <div class="algo-selection-container">
+                    <div id="chose-algo-title-container">
+                        <p class="controls-title">Choose solving algorithm:</p>
+                    </div>
+
+                    <div class="algo-radios">
+                        <div class="radio-container">
+                            <input type="radio" id="radio1" name="algo-radio-group" checked>
+                            <label for="radio1">Brute Force</label>
+                        </div>
+                        
+                        <div class="radio-container">
+                            <input type="radio" id="radio2" name="algo-radio-group">
+                            <label for="radio2">Brute Force v.2</label>
+                        </div>
+                        
+                        <div class="radio-container">
+                            <input type="radio" id="radio3" name="algo-radio-group">
+                            <label for="radio3">Bit Masks</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="generate-container">
+                    <div id="generate-random-title-container">
+                        <p class="controls-title">Generate random sudoku:</p>
+                    </div>
+
+                    <div id="generated-info-container">
+                        <p>Difficulty: <span id="difficulty-text">Medium</span></p>
+                        <p>Empty fields: <span id="empty-fields-text">50</span></p>
+                    </div>
+
+                    <div id="slider-container">
+                        <input type="range" min="40" max="59" value="50" step="1" id="slider">
+                    </div>
+
+                    <div id="generate-btn-container">
+                        <button id="generate-btn" class="btn">Generate</button>   
+                    </div>
+                </div>
+                
+
+                <div class="stats-container">
+                    <div id="stats-title-container">
+                        <p class="controls-title">Statistics</p>
+                    </div>
+                    <div id="stats-info-container">
+                        <p>Time to solve: <span id="solve-time-text">0ms</span></p>
+                        <p>Average steps per field: <span id="steps-per-field-text">0</span></p>
+                        <p>Number of backtracks:  <span id="backtracks-text">0</span></p>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+	</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
